@@ -33,8 +33,7 @@ code{
     flex-wrap:wrap;
     align-items:flex-start;
     align-content:flex-start;
-    height:500px;
-    /* height:945px; */
+    height:945px;
     border-radius:5px;
     overflow-x:hidden;
     font-family:'Open Sans', Calibri, serif
@@ -79,7 +78,7 @@ code{
     width:87px;
     padding:10px 27px 10px 10px;
     overflow-x:hidden;
-    overflow-y:scroll;
+    /* overflow-y:scroll; */
     margin-right:-17px
 }
 .discord-mockup .items-panel .actions{
