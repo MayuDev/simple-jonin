@@ -27,13 +27,13 @@ code{
 .discord-mockup{
     background:#36393e;
     position: relative;
-    width:100%;
+    width:111%;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     align-items:flex-start;
     align-content:flex-start;
-    height:500px;
+    height:700px;
     border-radius:5px;
     overflow-x:hidden;
     font-family:'Open Sans', Calibri, serif
