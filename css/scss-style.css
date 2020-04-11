@@ -153,7 +153,7 @@ nav.pinned .side-nav{
     background:#23272A;
     /* background:url("../images/img-bg-tile.png"),linear-gradient(to bottom, #2C2F33, #23272A); */
     min-height:100%;
-    padding-top:70px
+    /* padding-top:70px */
 }
 .hero .container{
     width:90%;
