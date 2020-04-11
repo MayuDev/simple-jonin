@@ -3363,7 +3363,7 @@ a{
     -webkit-tap-highlight-color:transparent
 }
 .valign-wrapper{
-    display:flex;
+    /* display:flex; */
     align-items:center
 }
 .clearfix{
