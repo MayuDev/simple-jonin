@@ -36,6 +36,7 @@ code{
     height:945px;
     border-radius:5px;
     overflow-x:hidden;
+    overflow-y: hidden;
     font-family:'Open Sans', Calibri, serif
 }
 @media only screen and (max-width: 992px){
