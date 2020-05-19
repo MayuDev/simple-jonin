@@ -1,138 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Jonin is a multi-purpose bot for a shrine maiden at Yae Village, with tons of simple and useful commands.">
-      <meta name="keywords" content="discord,bot,osu,google,info,jonin,yae,sakura,darkbolt,kasumi,Jonin,yae sakura,yae kasumi,easy,quality,darkbolt jonin">
-      <meta property="og:title" content="Jonin - A Discord Bot.">
-      <meta property="twitter:title" content="Jonin - A Discord Bot.">
-      <meta property="og:description" content="Jonin is a multi-purpose bot for a shrine maiden at Yae Village, with tons of simple and useful commands.">
-      <meta property="twitter:description" content="Jonin is a multi-purpose bot for a shrine maiden at Yae Village, with tons of simple and useful commands.">
-      <meta property="og:image" content="https://i.imgur.com/IeCEZbx.png">
-      <meta property="theme-color" content="#9571d3">
-      <title>Jonin - A Discord Bot.</title>
-      <link rel="icon" href="https://i.imgur.com/5oVTRwF.png" type="image/url">
-      <link href="css/materialize-materialize.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto%7CLato%7CMontserrat" rel="stylesheet">
-      <!-- Icons-->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link href="css/scss-discord-mockup.css" rel="stylesheet" type="text/css">
-      <link href="css/scss-style.css" rel="stylesheet" type="text/css">
-   </head>
-   <body id="page-top">
-      <div class="hero" id="page-top">
-         <div class="container">
-            <div class="row valign-wrapper">
-               <div class="col m12 l9">
-                  <div class="discord-mockup z-depth-3">
-                     <div class="items-panel">
-                        <div class="items">
-                           <div class="item"><a href="https://tinyurl.com/jonin-support" target="_blank"><img class="responsive-img" src="https://i.imgur.com/2feqpKr.png" alt="The bot logo"></a></div>
-                           <div class="item"><a href="https://tinyurl.com/jonin-invite" target="_blank"><button class="guild-add">+</button></a></div>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description"
+      content="Jonin is a multi-purpose bot for a shrine maiden at Yae Village, with tons of simple and useful commands.">
+   <meta name="keywords"
+      content="discord,bot,osu,google,info,jonin,yae,sakura,darkbolt,kasumi,Jonin,yae sakura,yae kasumi,easy,quality,darkbolt jonin">
+   <meta property="og:title" content="Jonin - A Discord Bot.">
+   <meta property="twitter:title" content="Jonin - A Discord Bot.">
+   <meta property="og:description"
+      content="Jonin is a multi-purpose bot for a shrine maiden at Yae Village, with tons of simple and useful commands.">
+   <meta property="twitter:description"
+      content="Jonin is a multi-purpose bot for a shrine maiden at Yae Village, with tons of simple and useful commands.">
+   <meta property="og:image" content="https://i.imgur.com/IeCEZbx.png">
+   <meta property="theme-color" content="#9571d3">
+   <title>Jonin - A Discord Bot.</title>
+   <link rel="icon" href="https://i.imgur.com/5oVTRwF.png" type="image/url">
+   <link href="css/materialize-materialize.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto%7CLato%7CMontserrat" rel="stylesheet">
+   <!-- Icons-->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link href="css/scss-discord-mockup.css" rel="stylesheet" type="text/css">
+   <link href="css/scss-style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top">
+   <div class="hero" id="page-top">
+      <div class="container">
+         <div class="row valign-wrapper">
+            <div class="col m12 l9">
+               <div class="discord-mockup z-depth-3">
+                  <div class="items-panel">
+                     <div class="items">
+                        <div class="item"><a href="http://discord.gg/H5PwwSJ" target="_blank"><img
+                                 class="responsive-img" src="https://i.imgur.com/SBXw9qL.png" alt="The bot logo"></a>
+                        </div>
+                        <div class="item"><a
+                              href="https://discordapp.com/oauth2/authorize?client_id=662517805983334416&permissions=2137517567&scope=bot"
+                              target="_blank"><button class="guild-add" style="padding-bottom: 17px;">+</button></a>
                         </div>
                      </div>
-                     <div class="sidebar-panel">
-                        <div class="header">Jonin Support</div>
-                        <div class="items">
-                           <div class="item">
-                              <div class="content trigger-group" data="default">help</div>
+                  </div>
+                  <div class="sidebar-panel">
+                     <div class="header">Jonin Support</div>
+                     <div class="items">
+                        <div class="item">
+                           <div class="content trigger-group" data="default">help</div>
+                        </div>
+                        <div class="item">
+                           <div class="content trigger-group" data="general">commands</div>
+                        </div>
+                        <div class="item">
+                           <div class="content trigger-group" data="sponsor">api</div>
+                        </div>
+                        <div class="item">
+                           <div class="content trigger-group" data="credits">developers</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="messages-panel">
+                     <div class="messages-group show" id="default">
+                        <div class="header">help</div>
+                        <div class="messages">
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kNZKlNy.jpg"
+                                    alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//about</div>
+                              </div>
                            </div>
-                           <div class="item">
-                              <div class="content trigger-group" data="general">commands</div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title" style="font-size: 10px;"><img
+                                                src="https://i.imgur.com/fsjLxdQ.gif"
+                                                style="max-width: auto; height: 20px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 10px;"
+                                                alt="jonin_logo">&ensp;<a style="color:white"
+                                                href="https://discord.gg/H5PwwSJ">About Jonin</a></div>
+                                          <div class="fields">
+                                             <div class="field">
+                                                <div class="text"><img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">Age: 500+ [Deceased]
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">Bot version created: Fri Jan 03 2020
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">Birthday: July 22
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">Height: 194cm (including ears)
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">Weight: 56kg
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">Type: <img src="https://i.imgur.com/HH1qaOw.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="bio"> Biological [BIO]
+                                                   <br>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Overview</p>
+                                                   </div>
+                                                   <div class="text">I am <a
+                                                         href="https://top.gg/bot/662517805983334416">Jonin</a>, a
+                                                      discord bot made by <a
+                                                         href="https://twitter.com/KurasadHV">[HV]Kurasad#2521</a> and
+                                                      <a href="https://twitter.com/iMayuDev">Mayu#2989</a>, I am a
+                                                      multi-purpose bot for a shrine maiden at Yae Village. A bot for
+                                                      GIFs, Weather, Management, Info, osu!, Google searches, and many
+                                                      more features. If you liked Jonin, <a
+                                                         href="https://tinyurl.com/jonin-vote">vote</a> or <a
+                                                         href="https://www.patreon.com/jonin">donate</a>, click
+                                                      <a href="https://jonin.gq/">here</a> if
+                                                      you want to know <a href="https://jonin.gq/info.html">more
+                                                         information</a> about me or my <a
+                                                         href="https://jonin.gq/about-us.html">devs</a>.
+                                                   </div>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Other Information</p>
+                                                   </div>
+                                                   <div class="text">I have hierarchies for users, everyone is a
+                                                      villager, if you are a supporter you can become a shrine maiden,
+                                                      gate keeper, or alder! Gonpachiro users are approved users for
+                                                      secret features for Jonin but above them are devs, and finally at
+                                                      the top are owners, below is a tree visualizing the status of my
+                                                      members.
+                                                   </div>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Hierarchy</p>
+                                                   </div>
+                                                   <div class="text">
+                                                      <p
+                                                         style="border-radius:3px; border-color:rgba(13,13,15, 0.7); padding-left: 1em; background-color: rgba(13,13,15, 0.7); color: #B58900; min-height: 200px;">
+                                                         &thinsp;.<br>
+                                                         <f style="font-family:monospace">├── </f>Owners<br>
+                                                         <f style="font-family:monospace">│ &emsp;&ensp;├── </f>
+                                                         Developers<br>
+                                                         <f style="font-family:monospace">│ &emsp;&ensp;├── </f>
+                                                         Moderators<br>
+                                                         <f style="font-family:monospace">│ &emsp;&ensp;└── </f>
+                                                         Gonpachiro<br>
+                                                         <f style="font-family:monospace">└── </f> Supporters<br>
+                                                         <f style="font-family:monospace">&emsp;&emsp;&emsp;&emsp;├──
+                                                         </f>Yae Village Alder<br>
+                                                         <f style="font-family:monospace">&emsp;&emsp;&emsp;&emsp;├──
+                                                         </f>Yae Village Gate Keeper<br>
+                                                         <f style="font-family:monospace">&emsp;&emsp;&emsp;&emsp;├──
+                                                         </f>Yae Village Shrine Maiden<br>
+                                                         <f style="font-family:monospace">&emsp;&emsp;&emsp;&emsp;└──
+                                                         </f>Yae Villager (Default)<br>
+                                                      </p>
+                                                   </div>
+                                                   <div class="text">
+                                                      <p style="color:#72767D; padding-left: 2px; font-size:11px"><br>
+                                                         Provided by: Jonin &bull;
+                                                         <f>Today at <span id="abouttime"></span></f>
+                                                      </p>
+                                                      <script>
+                                                         var dt = new Date();
+                                                         document.getElementById("abouttime").innerHTML = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                                                      </script>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
-                           <div class="item">
-                              <div class="content trigger-group" data="sponsor">api</div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kNZKlNy.jpg"
+                                    alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//help</div>
+                              </div>
                            </div>
-                           <div class="item">
-                              <div class="content trigger-group" data="credits">developers</div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title" style="font-size: 10px;"><img
+                                                src="https://i.imgur.com/fsjLxdQ.gif"
+                                                style="max-width: auto; height: 20px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 10px;"
+                                                alt="jonin_logo">&ensp;<a style="color:white"
+                                                href="https://discord.gg/H5PwwSJ">Jonin's Help list</a></div>
+                                          <div class="fields">
+                                             <div class="field">
+                                                <div class="text"><img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help api
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help devs
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help helpers
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help information
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help interact
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help moderation
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help music
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow">//help owner
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"> //help requests
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"> //help full
+                                                </div>
+                                                <div class="text">
+                                                   <p style="color:#72767D; padding-left: 2px; font-size:11px"><br>
+                                                      Provided by: Jonin &bull;
+                                                      <f>Today at <span id="helptime"></span></f>
+                                                   </p>
+                                                   <script>
+                                                      var dt = new Date();
+                                                      document.getElementById("helptime").innerHTML = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                                                   </script>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kNZKlNy.jpg"
+                                    alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//explain weather</div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title"><b>Command: Weather</b></div>
+                                          <img class="thumb" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin's pfp"
+                                             style="float:right; margin-left:250px;">
+                                          <div class="fields">
+                                             <div class="field">
+                                                <div class="text" style="overflow: visible; white-space: nowrap;"><code
+                                                      class="inline">//key</code>for more information
+                                                   about <code class="inline" style="display: inline-block;"><></code>
+                                                   <code class="inline">[]</code>
+                                                   <code class="inline">()</code>
+                                                   <br>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Usage</p>
+                                                   </div>
+                                                   <div class="text">//weather [CITY]
+                                                   </div>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Aliases
+                                                      </p>
+                                                   </div>
+                                                   <div class="text">//weather<br>//w
+                                                   </div>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Description
+                                                      </p>
+                                                   </div>
+                                                   <div class="text">Forecasted weather information for [CITY]
+                                                   </div>
+                                                   <div class="title">
+                                                      <p style="color: #76727D; padding-top: 6px;">Accessable By
+                                                      </p>
+                                                   </div>
+                                                   <div class="text">Villagers
+                                                   </div>
+                                                   <div class="text">
+                                                      <p style="color:#72767D; padding-left: 2px; font-size:11px"><br>
+                                                         Provided by: Jonin &bull;
+                                                         <f>Today at <span id="explaintime"></span></f>
+                                                      </p>
+                                                      <script>
+                                                         var dt = new Date();
+                                                         document.getElementById("explaintime").innerHTML = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                                                      </script>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kNZKlNy.jpg"
+                                    alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//key</div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin's Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title" style="font-size: 10px;"><img
+                                                src="https://i.imgur.com/fsjLxdQ.gif"
+                                                style="max-width: auto; height: 20px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 10px;"
+                                                alt="jonin_logo">&ensp;<a style="color:white"
+                                                href="https://discord.gg/H5PwwSJ">Jonin's Keys</a></div>
+                                          <img class="thumb" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin's pfp">
+                                          <div class=" fields">
+                                             <div class="field">
+                                                <div class="text"><code class="inline"><></code> = Aliases, keywords
+                                                   that can also trigger the command<br><code class="inline">[]</code> =
+                                                   Required input, without this input the command would not function as
+                                                   it should<br><code class="inline">()</code> = Optional input, without
+                                                   this input the command would still function properly<br><code
+                                                      class="inline">TIN</code> = Troubleshooting Identification Number
+                                                   (Devs and Gonpachiro users)<br>
+                                                </div>
+                                                <div class="text">
+                                                   <p style="color:#72767D; padding-left: 2px; font-size:11px"><br>
+                                                      Provided by: Jonin &bull;
+                                                      <f>Today at <span id="keytime"></span></f>
+                                                   </p>
+                                                   <script>
+                                                      var dt = new Date();
+                                                      document.getElementById("keytime").innerHTML = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                                                   </script>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
-                     <div class="messages-panel">
-                        <div class="messages-group show" id="default">
-                           <div class="header">help</div>
-                           <div class="messages">
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Bot Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Features</div>
-                                             <div class="fields">
-                                                <div class="field">
-                                                   <div class="text"><code class="inline">Don't Know A Command?!</code>&nbsp;&bull;&nbsp;Jonin has ways to help you out, some commands list the commands and their functions-//help-and other commands help you understand how to use the bot-//explain [COMMAND].<br><br><code class="inline">API's</code>&nbsp;&bull;&nbsp;Jonin has a library of API's, New API's are added constantly and old API's are improved upon if a better one is found.<br><br><code class="inline">Used a command wrong?</code>&nbsp;&bull;&nbsp;Jonin has detailed instructions for most commands if there is a chance that the command could be misunderstood.<br><br><code class="inline">New commands</code>&nbsp;&bull;&nbsp;New commands can be requested by users and will be added if approved by a dev.<br></div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
+                     <div class="messages-group" id="general">
+                        <div class="header">commands</div>
+                        <div class="messages">
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kNZKlNy.jpg"
+                                    alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//invite</div>
                               </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kkdBiWO.jpg" alt="Mayu avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Mayu</div>
-                                    <div class="content">//help</div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
                                  </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Music Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Jonin's Commands for: Helpers</div>
-                                             <div class="text"><br>"[ ]" = User Input -- "< >" = Aliases.</div>
-                                             <div class="fields">
-                                                <div class="field">
-                                                   <div class="field-title">//help <h><aid> </div>
-                                                   <code class="inline">List of Jonin's commands with categories</code>&ensp;
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <img class="thumb" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin's pfp"
+                                             style="float:right; margin-left:80px;">
+                                          <div class="title" style="font-size: 10px;"><img
+                                                src="https://i.imgur.com/fsjLxdQ.gif"
+                                                style="max-width: auto; height: 20px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 10px;"
+                                                alt="jonin_logo">&ensp;<a style="color:white"
+                                                href="https://discord.gg/H5PwwSJ">Jonin's Invite Links</a></div>
+
+                                          <div class="fields">
+                                             <div class="field" style="overflow: visible; white-space: nowrap;">
+                                                <div class="text">
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"><a
+                                                      style="overflow: visible; white-space: nowrap; display:inline-block;"
+                                                      href="https://discordapp.com/oauth2/authorize?client_id=662517805983334416&permissions=2137517567&scope=bot">Invite
+                                                      with all permissions</a>
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"><a style="overflow: visible; white-space: nowrap;"
+                                                      href="https://discordapp.com/api/oauth2/authorize?client_id=662517805983334416&permissions=8&scope=bot">Invite
+                                                      as administrator</a>
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"><a style="overflow: visible; white-space: nowrap;"
+                                                      href="https://discordapp.com/api/oauth2/authorize?client_id=662517805983334416&permissions=1543892167&scope=bot">Invite
+                                                      as a moderator</a>
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"><a
+                                                      href="https://discordapp.com/api/oauth2/authorize?client_id=662517805983334416&permissions=67488833&scope=bot">Invite
+                                                      with normal permissions</a>
+                                                   <br>
+                                                   <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                      style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                      alt="arrow"><a
+                                                      href="https://discordapp.com/oauth2/authorize?client_id=662517805983334416&permissions=0&scope=bot">Invite
+                                                      with no permissions</a>
                                                 </div>
-                                             </div>
-                                             <div class="fields">
-                                                <div class="field">
-                                                   <div class="field-title">//commands</div>
-                                                   <code class="inline">List of Jonin's commands</code>&ensp;
-                                                </div>
-                                             </div>
-                                             <div class="fields">
-                                                <div class="field">
-                                                   <div class="field-title">//explain [COMMAND] <e></div>
-                                                   <code class="inline">More detailed description of [COMMAND]</code>&ensp;
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kkdBiWO.jpg" alt="Mayu avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Mayu</div>
-                                    <div class="content">//explain ping</div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Music Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">How to use ping</div>
-                                             <div class="text"><br>Any text in "[ ]" is not a set value</div>
-                                             <div class="fields">
-                                                <div class="field">
-                                                   <div class="text"><code class="inline">Links</code>&nbsp;&nbsp;<br><a href="https://tinyurl.com/jonin-invite">Invite</a> | <a href="https://tinyurl.com/jonin-support">Support</a> | <a href="https://www.patreon.com/jonin">Donate</a> | <a href="https://jonin.gq/">Site</a> | //g<br><br><code class="inline">Input</code>&nbsp;&nbsp;<br>//ping<br><br><code class="inline">Output<br></code>&nbsp;&nbsp;<br>Pong!, Latency for discord, Latency for API<br><br><code class="inline">Example output</code>&nbsp;&nbsp;<br>🏓Pong!<br>Latency is [NUMBER]ms<br>API Latency is [NUMER]ms</div>
+                                                <div class="text">
+                                                   <p style="color:#72767D; padding-left: 2px; font-size:11px"><br>
+                                                      Provided by: Jonin &bull;
+                                                      <f>Today at <span id="invitetime"></span></f>
+                                                   </p>
+                                                   <script>
+                                                      var dt = new Date();
+                                                      document.getElementById("invitetime").innerHTML = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                                                   </script>
                                                 </div>
                                              </div>
                                           </div>
@@ -141,404 +497,133 @@
                                  </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="messages-group" id="general">
-                           <div class="header">commands</div>
-                           <div class="messages">
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kkdBiWO.jpg" alt="Mayu avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Mayu</div>
-                                    <div class="content">//invite</div>
-                                 </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kNZKlNy.jpg"
+                                    alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//ping</div>
                               </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Music Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Jonin's invite links</div>
-                                             <div class="text"><br>Here is Jonin's invite link with&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Here is Jonin's invite link without<br>administrator permissions&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; administrator permissions<br><a href="https://tinyurl.com/jonin-invite" target="_blank">https://tinyurl.com/jonin-invite</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://tinyurl.com/jonin-no-admin" target="_blank"> https://tinyurl.com/jonin-no-admin</a></div>
-                                          </div>
-                                       </div>
-                                    </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
                                  </div>
+                                 <div class="content">🏓 Pong!<br>Latency is <span id="randNumping"></span>ms<br>API
+                                    Latency
+                                    is <span id="randNumapi"></span>ms</div>
+                                 <script>
+                                    document.getElementById("randNumping").innerHTML = Math.floor(Math.random() * 200);
+                                    document.getElementById("randNumapi").innerHTML = Math.floor(Math.random() * 100);
+                                 </script>
                               </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kkdBiWO.jpg" alt="Mayu avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Mayu</div>
-                                    <div class="content">//ping</div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Music Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="content">🏓 Pong!<br>Latency is 77ms<br>API Latency is 18ms</div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/kkdBiWO.jpg" alt="Mayu avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Mayu</div>
-                                    <div class="content">//info <a href="" target="_blank">@Mayu</a></div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Music Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">🟢 Mayu#2989</div>
-                                             <div class="text"><br><code class="inline">Username</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline">Nickname</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline">ID</code><br>Mayu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mayu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;568824243396<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;149248<br><br><code class="inline">Account</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline">Joined Server</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code class="inline">Status</code><br><code class="inline">Created</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon, Jan 06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🟢 - online<br>Fri, Apr 19 2019&nbsp;&nbsp;&nbsp;&nbsp;2020<br><br><code class="inline">Roles</code><br><a href="" style="color:#5e78d7">@everyone</a> | <a href="" style="color:#cc3d33">@Hu-man</a> | <a href="" style="color:#d62947">@Bot Master</a> |<br><a href="" style="color:#cc84ff">@Moderator</a> | <a href="" style="color:#c4b819">@Per-☀️</a> | <a href="" style="color:#ce1434">@Loli King</a> | <a href="" style="color:#269979">@Special</a> |<br><a href="" style="color:#0bc2d3">@Supporter</a> | <a href="" style="color:#38dd27">@Gonpachiro</a> | <a href="" style="columns: #b45820;">@Developer</a> | <a href="" style="color:#6a4280">@To</a><br><a href="" style="color:#6a4280">mod, or not to mod</a> | <a href="" style="color:#2c5876">@λ</a> | <a href="" style="color:#e01d8f">@Yae Village Member</a> |<br><a href="" style="color:#1a62cc">@Partners</a><br><br></div>
-                                             <img class="img-fluid image" src="https://i.imgur.com/kkdBiWO.jpg" width="300" /></a>
-                                          </div>
-                                       </div>
-                                    </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon" style="left: 20px;"><img class="responsive-img"
+                                    src="https://i.imgur.com/kNZKlNy.jpg" alt="[HV]Kurasad's avatar"></div>
+                              <div class="body">
+                                 <div class="user-name"><a style="color:white"
+                                       href="https://twitter.com/KurasadHV">[HV]Kurasad</a></div>
+                                 <div class="content">//info <h href="https://twitter.com/KurasadHV"
+                                       style="color: #7289DA">@[HV]Kurasad</h>
                                  </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="messages-group" id="sponsor">
-                           <div class="header">api</div>
-                           <div class="messages">
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin Discord Music Avatar"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">OpenWeather API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/tNgQMbP.jpg" alt="OpenWeather logo">
-                                             <div class="text">
-                                                <p>Get current weather, daily forecast for 16 days, and 3-hourly forecast 5 days for your city. Helpful stats, graphics, and this day in history charts are available for your reference. Interactive maps show precipitation, clouds, pressure, wind around your location.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://openweathermap.org/" target="_blank">[Website] </a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
                                  </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">osu! API</div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">🔴 [HV]Kurasad#2521</div>
+                                          <div class="text"><br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Username: [HV]Kurasad#2521</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Nickname: [HV]Kurasad#2521</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>ID: 476812566530883604</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Owner: Yes</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Account Created: Wed Aug 08 2018</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Joined Server: Mon May 18 2020</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Number of roles: 2</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Join rank: 1st</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Status: 🔴 - dnd</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Approved(///hiro): Yes</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Bot: No</f>
+                                             <br>
+                                             <img src="https://i.imgur.com/y7kEzeZ.png"
+                                                style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                                alt="arrow">
+                                             <f>Owner of Jonin: Yes</f>
+                                             <br>
+                                             <br>
+                                             <img class="img-fluid image" src="https://i.imgur.com/kNZKlNy.jpg"
+                                                style="border-radius: 5px;" width="300" />
                                              <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/cvCHUXp.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>The osu! API is intended to allow the creation of third-party awesomeness. It is still in its infancy and primarily been written based on requests of users.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://osu.ppy.sh/p/api/" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Giphy API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/0TdiIs7.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>GIPHY SDK helps you integrate the world's largest GIF library, customize a suite of powerful features, and boost engagement with just a few lines of code.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://developers.giphy.com/" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">FortniteAPI API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/U4vnP7b.jpg" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>This API provides the most important data about Fortnite so you can use in your apps, bots and web pages.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://fortniteapi.io/" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Google Custom Search API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/Le2yI09.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>Google Custom Search enables you to create a search engine for your website, your blog, or a collection of websites  </p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://developers.google.com/custom-search" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Discord Bot List API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/HwgR51A.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>This is our official JavaScript Library for top.gg, if you have any issues please submit an issue on our github.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://top.gg/api/docs" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">OMDb API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://code.4noobz.net/wp-content/uploads/2018/10/OMDB-API.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="http://www.omdbapi.com/" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">News API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/sKF1U4C.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>Get breaking news headlines, and search for articles from over 30,000 news sources and blogs with our news API</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://newsapi.org/" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Astronomy Picture of the Day API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/NhIDkmC.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href=" https://api.nasa.gov/ " target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Danbooru API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/2KiG63D.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>Danbooru offers a REST-like API to make scripting easy. All you need is a way to GET, POST, PUT and DELETE to URLs. Responses are given in either XML or JSON format.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://danbooru.donmai.us/wiki_pages/help:api" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Patreon API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/DKEoLEQ.jpg" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>Our API, when granted explicit permission from creators and patrons, tells external services who is a patron and what pledge level they are at. It also provides other information that helps fulfill patron-only experiences.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://docs.patreon.com/#introduction" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Time API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://cdn.timezonedb.com/images/logo.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>TimeZoneDB provides simple RESTful interface API and returns structured XML or JSON responses.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://timezonedb.com/api" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">FullContact API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_341909d210d3e2375399a85153441b90/fullcontact-apis.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>By tapping into our patented Person-Centered Graph and powerful APIs, you can complete customer profiles and enrich them with insights.</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://www.fullcontact.com/developer-portal/" target="_blank">[Website]</a></p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">IP API</div>
-                                             <div class="text">
-                                                <p>&#8203;</p>
-                                             </div>
-                                             <img class="thumb" src="https://i.imgur.com/YfpAp9G.png" alt="Lulurd logo">
-                                             <div class="text">
-                                                <p>IP Lookup | IP Location API for IP address geolocation for your website & mobile app</p>
-                                             </div>
-                                             <div class="text">
-                                                <p> <a href="https://ipapi.co/#api" target="_blank">[Website]</a></p>
+                                                <p style="color:#72767D; padding-left: 2px; font-size:11px"><br>
+                                                   Provided by: Jonin &bull;
+                                                   <f>Today at <span id="infotime"></span></f>
+                                                </p>
+                                                <script>
+                                                   var dt = new Date();
+                                                   document.getElementById("infotime").innerHTML = dt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                                                </script>
                                              </div>
                                           </div>
                                        </div>
@@ -547,40 +632,512 @@
                               </div>
                            </div>
                         </div>
-                        <div class="messages-group" id="credits">
-                           <div class="header">developers</div>
-                           <div class="messages">
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">[HV]Kurasad</div>
-                                             <img class="thumb" src="https://i.imgur.com/URb0ap2.jpg" alt="Kode works on Jonin">
-                                             <div class="text">
-                                                <p><br>My age is between 1 and 100. I like to code and make unique programs for everyone to use. I am the creator of <a href="https://jonin.gq/" target="_blank">Jonin</a> and a developer for <a href="https://suubot.tk/" target="_blank">Suu</a> as well as <a href="https://github.com/JonnyBoy2000/Rio" target="_blank">Rio™️</a>. </p>
-                                             </div>
+                     </div>
+                     <div class="messages-group" id="sponsor">
+                        <div class="header">api</div>
+                        <div class="messages">
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">OpenWeather API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/tNgQMbP.jpg"
+                                             alt="OpenWeather logo">
+                                          <div class="text">
+                                             <p>Get current weather, daily forecast for 16 days, and 3-hourly
+                                                forecast 5
+                                                days for your city. Helpful stats, graphics, and this day in history
+                                                charts are available for your reference. Interactive maps show
+                                                precipitation, clouds, pressure, wind around your location.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://openweathermap.org/" target="_blank">[Website] </a>
+                                             </p>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div class="message">
-                                 <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg" alt="Jonin"></div>
-                                 <div class="body">
-                                    <div class="user-name">Jonin</div>
-                                    <div class="embed-wrapper">
-                                       <div class="color-pill" style="background-color: #FF0092"></div>
-                                       <div class="content-inner">
-                                          <div class="description">
-                                             <div class="title">Mayu</div>
-                                             <img class="thumb" src="https://i.imgur.com/kkdBiWO.jpg" alt="Mayu owns Jonin">
-                                             <div class="text">
-                                                <p><br>I'm a 15 year old high school senior who thinks he can code but actually can't! I like <a href="https://www.urbandictionary.com/define.php?term=Anime" target="_blank">anime</a> and <a href="https://www.urbandictionary.com/define.php?term=fps%20game" target="_blank">FPS games</a>.</p>
-                                             </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">osu! API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/cvCHUXp.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>The osu! API is intended to allow the creation of third-party
+                                                awesomeness. It is still in its infancy and primarily been written
+                                                based
+                                                on requests of users.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://osu.ppy.sh/p/api/" target="_blank">[Website]</a>
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Giphy API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/0TdiIs7.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>GIPHY SDK helps you integrate the world's largest GIF library,
+                                                customize
+                                                a suite of powerful features, and boost engagement with just a few
+                                                lines
+                                                of code.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://developers.giphy.com/" target="_blank">[Website]</a>
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">FortniteAPI API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/U4vnP7b.jpg" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>This API provides the most important data about Fortnite so you can
+                                                use
+                                                in your apps, bots and web pages.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://fortniteapi.io/" target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Google Custom Search API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/Le2yI09.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>Google Custom Search enables you to create a search engine for your
+                                                website, your blog, or a collection of websites </p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://developers.google.com/custom-search"
+                                                   target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Discord Bot List API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/HwgR51A.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>This is our official JavaScript Library for top.gg, if you have any
+                                                issues please submit an issue on our github.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://top.gg/api/docs" target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">OMDb API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb"
+                                             src="https://code.4noobz.net/wp-content/uploads/2018/10/OMDB-API.png"
+                                             alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>The OMDb API is a RESTful web service to obtain movie information,
+                                                all
+                                                content and images on the site are contributed and maintained by our
+                                                users.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="http://www.omdbapi.com/" target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">News API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/sKF1U4C.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>Get breaking news headlines, and search for articles from over 30,000
+                                                news sources and blogs with our news API</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://newsapi.org/" target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Astronomy Picture of the Day API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/NhIDkmC.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>One of the most popular websites at NASA is the Astronomy Picture of
+                                                the
+                                                Day. In fact, this website is one of the most popular websites across
+                                                all federal agencies.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href=" https://api.nasa.gov/ " target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Danbooru API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/2KiG63D.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>Danbooru offers a REST-like API to make scripting easy. All you need
+                                                is
+                                                a way to GET, POST, PUT and DELETE to URLs. Responses are given in
+                                                either XML or JSON format.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://danbooru.donmai.us/wiki_pages/help:api"
+                                                   target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Patreon API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/DKEoLEQ.jpg" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>Our API, when granted explicit permission from creators and patrons,
+                                                tells external services who is a patron and what pledge level they
+                                                are
+                                                at. It also provides other information that helps fulfill patron-only
+                                                experiences.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://docs.patreon.com/#introduction"
+                                                   target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Time API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://cdn.timezonedb.com/images/logo.png"
+                                             alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>TimeZoneDB provides simple RESTful interface API and returns
+                                                structured
+                                                XML or JSON responses.</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://timezonedb.com/api" target="_blank">[Website]</a>
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">IP API</div>
+                                          <div class="text">
+                                             <p>&#8203;</p>
+                                          </div>
+                                          <img class="thumb" src="https://i.imgur.com/YfpAp9G.png" alt="Lulurd logo">
+                                          <div class="text">
+                                             <p>IP Lookup | IP Location API for IP address geolocation for your
+                                                website
+                                                & mobile app</p>
+                                          </div>
+                                          <div class="text">
+                                             <p> <a href="https://ipapi.co/#api" target="_blank">[Website]</a></p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="messages-group" id="credits">
+                        <div class="header">developers</div>
+                        <div class="messages">
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">[HV]Kurasad <img src="https://i.imgur.com/CVwFUUv.png"
+                                             style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                             alt="HypeSquad Brilliance"> <img src="https://i.imgur.com/o12Ofsx.png"
+                                             style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                             alt="Verified Bot Developer"></div>
+                                          <img class="thumb" src="https://i.imgur.com/URb0ap2.jpg"
+                                             alt="Kode works on Jonin">
+                                          <div class="text">
+                                             <p><br>My age is between 1 and 100. I like to code and make unique
+                                                programs
+                                                for everyone to use. I am the creator of <a href="https://jonin.gq/"
+                                                   target="_blank">Jonin</a> and a developer for <a
+                                                   href="https://suubot.tk/" target="_blank">Suu</a> as well as <a
+                                                   href="https://github.com/JonnyBoy2000/Rio" target="_blank">Rio™️</a>.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="icon"><img class="responsive-img" src="https://i.imgur.com/PrsfQNM.jpg"
+                                    alt="Jonin Discord Bot Avatar"></div>
+                              <div class="body">
+                                 <div class="user-name" style="vertical-align:center;">Jonin&ensp;<f
+                                       style="display: inline-block; border-radius:3px; padding-left: 3px; vertical-align:bottom; border-color:#7289DA; background-color: #7289DA; max-width: 55px; min-width: 55px; color: white; max-height: 20px; font-size: 14px">
+                                       <img src="https://i.imgur.com/wVY179c.png"
+                                          style="max-width: auto; height: 18px; display:inline-block; position: relative; vertical-align:top; text-align: center;"
+                                          alt="verified bot">BOT</f>
+                                 </div>
+                                 <div class="embed-wrapper">
+                                    <div class="color-pill" style="background-color: #FF0092"></div>
+                                    <div class="content-inner">
+                                       <div class="description">
+                                          <div class="title">Mayu <img src="https://i.imgur.com/fY3AAfp.png"
+                                             style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                             alt="HypeSquad Balance"> <img src="https://i.imgur.com/o12Ofsx.png"
+                                             style="max-width: auto; height: 17px; text-align: center; display:inline-block; vertical-align:bottom; font-size: 14px;"
+                                             alt="Verified Bot Developer"></div>
+                                          <img class="thumb" src="https://i.imgur.com/kkdBiWO.jpg"
+                                             alt="Mayu owns Jonin">
+                                          <div class="text">
+                                             <p><br>I'm a 15 year old high school senior who thinks he can code but
+                                                actually can't! I like <a
+                                                   href="https://www.urbandictionary.com/define.php?term=Anime"
+                                                   target="_blank">anime</a> and <a
+                                                   href="https://www.urbandictionary.com/define.php?term=fps%20game"
+                                                   target="_blank">FPS games</a>.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -594,6 +1151,12 @@
             </div>
          </div>
       </div>
-      <script src="js/jquery-jquery.min.js"></script><script src="js/jquery-jquery.matchHeight.js"></script><script src="js/bin-materialize.min.js"></script><script src="js/8428-js-theme.js"></script><script src="js/1243-js-discord-mockup.js"></script>
-   </body>
+   </div>
+   <script src="js/jquery-jquery.min.js"></script>
+   <script src="js/jquery-jquery.matchHeight.js"></script>
+   <script src="js/bin-materialize.min.js"></script>
+   <script src="js/8428-js-theme.js"></script>
+   <script src="js/1243-js-discord-mockup.js"></script>
+</body>
+
 </html>

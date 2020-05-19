@@ -26,14 +26,14 @@ code{
 }
 .discord-mockup{
     background:#36393e;
-    position: relative;
-    width:111%;
+    position: absolute;
+    width:99.9vw;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     align-items:flex-start;
     align-content:flex-start;
-    height:945px;
+    height:100vh;
     border-radius:5px;
     overflow-x:hidden;
     overflow-y: hidden;
